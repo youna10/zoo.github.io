@@ -123,7 +123,7 @@
         </div>
     </section>
 <section class="groupall">
-    <h1>다양한 즐길거리를 한눈에!</h1>
+    <h1 class="group-title">다양한 즐길거리를 한눈에!</h1>
     <div class="group">
         <img src="./img/Group 7.png" alt="">
         <img src="./img/Group 8.png" alt="">
@@ -451,25 +451,31 @@ document.querySelectorAll('.newsimgs').forEach(slider => {
     startAutoSlide();
   });
 
-  const groupSection = document.querySelector('.groupall');
-  const images = document.querySelectorAll('.group img');
+const groupSection = document.querySelector('.groupall');
+const title = document.querySelector('.group-title');
+const images = document.querySelectorAll('.group img');
 
-  const observers = new IntersectionObserver(entries => {
-    entries.forEach(entry => {
-      if (entry.isIntersecting) {
-        images.forEach((img, index) => {
-          setTimeout(() => {
-            img.classList.add('visible');
-          }, index * 400); // 300ms 간격으로 순차 등장
-        });
-        observers.unobserve(groupSection); // 한 번만 실행
-      }
-    });
-  }, {
-    threshold: 0.7
+const observers = new IntersectionObserver(entries => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      // 텍스트 먼저 표시
+      title.classList.add('visible');
+
+      // 이미지들 순차적으로 표시
+      images.forEach((img, index) => {
+        setTimeout(() => {
+          img.classList.add('visible');
+        }, (index + 1) * 400); // 텍스트 이후부터 시작
+      });
+
+      observers.unobserve(groupSection); // 한 번만 실행
+    }
   });
+}, {
+  threshold: 0.7
+});
 
-  observers.observe(groupSection);
+observers.observe(groupSection);
 
   const btnA = document.getElementById('btnA');
   const btnB = document.getElementById('btnB');

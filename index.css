@@ -240,6 +240,9 @@ h1{
 .groupall h1{
     margin-top: 30px;
     margin-left: 10px;
+    opacity: 0;
+    transform: translateY(30px);
+     transition: opacity 0.6s ease, transform 0.6s ease;
 }
 .group{
     margin-top: 30px;
@@ -256,6 +259,7 @@ h1{
     transform: translateY(30px);
     transition: all 0.6s ease;
 }
+.groupall h1.visible,
 .group img.visible {
     opacity: 1;
     transform: translateY(0);
