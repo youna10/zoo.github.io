@@ -59,7 +59,6 @@ header{
     border-top: solid 3px #CD0071;
     padding-bottom: 30px;
     width: 100%;
-
     top: 16%;
     left: 0;
     opacity: 0;
@@ -444,6 +443,8 @@ h1{
     border-radius: 30px;
     border:solid  #CD0071 ;
     background: none;
+    text-decoration: none;
+    color: white;
   }
   .tab-buttons button:nth-child(1){
     padding: 10px 37px;
