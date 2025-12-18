@@ -109,7 +109,7 @@
     <section>
         <div class="slider-container">
             <div class="slider">
-                <img src=".\img\image 1.png" alt="Image 1">
+                <img src=".\img\image1.png" alt="Image 1">
                 <img src=".\img\image2.png" alt="Image 2">
                 <img src=".\img\image3.png" alt="Image 3">
             </div>
@@ -132,78 +132,71 @@
     </div>
 </section>
 <section class="atraction">
-    <h1>재미있고 즐거운 어트렉션!</h1>
-    <div class="atractions">
+    <div class="textimgs">
+        <img class="rions1" src="./img/rion1.png" alt="">
+        <p>재미있고 즐거운 <span>어트렉션!</span></p>
+        <img class="rions2" src="./img/rion2.png" alt="">
+    </div>
+ 
     <div class="tab-buttons">
-        <button id="btnA" class="active">스릴체험</button>
-        <button id="btnB">가족과 함께</button> 
-        <button id="btnC">더 많은 어트렉션 보기 </button>
+        <ul>
+            <li><button id="btnA"class="tab-btn active" data-tab="a">스릴</button></li>
+            <li><button id="btnB" class="tab-btn " data-tab="b">패밀리</button></li>
+            <li><button id="btnC" class="tab-btn " data-tab="c">어린이</button></li>
+        </ul>   
     </div>
     <div class="atractions2"> 
       <!-- A 이미지 그룹 -->
-      <div class="image-group active" id="groupA">
-        <img src="./img/바이킹.png" alt="A1">
-        <img src="./img/와일드스톰.png  " alt="A2">
-        <img src="./img/후룸라이드.png" alt="A3">
-        <img src="./img/자이언트드롭.png" alt="A4">
-      </div>
+        <div class="tab-group active" data-tab="a">
+            <img src="./img/스릴1.png" alt="A1">
+            <img src="./img/스릴2.png  " alt="A2">
+            <img src="./img/스릴3.png" alt="A3">
+        </div>
       
       <!-- B 이미지 그룹 -->
-      <div class="image-group" id="groupB">
-        <img src="./img/Frame 114.png" alt="B1">
-        <img src="./img/Frame 115.png" alt="B2">
-        <img src="./img/Frame 116.png" alt="B3">
-        <img src="./img/Frame 117.png" alt="B4">
-      </div>
-    </div>
+        <div class="tab-group" data-tab="b">
+            <img src="./img/패밀리1.png" alt="">
+            <img src="./img/패밀리2.png" alt="">
+            <img src="./img/패밀리3.png" alt="">
+        </div>
+
+  <!-- 어린이 -->
+        <div class="tab-group" data-tab="c">
+            <img src="./img/어린이1.png" alt="">
+            <img src="./img/어린이2.png" alt="">
+            <img src="./img/어린이3.png" alt="">
+        </div>
     </div>
 </section>
-<section class="imp">
-    <div class="gridall">
-        <div class="item1">
-            <img src="./img/img2.png" alt="">
-            <div>
-                <p>축제및공연</p>
-                <p>축제 및 공연 일정을 알아보세요.</p>
-            </div>
-        </div>
-        <div class="item1">
-            <img src="./img/img3.png" alt="">
-            <div>
-                <p>할인정보</p>
-                <p>현재 진행 중인 할인혜택을 알아보세요. </p>
-            </div>
-        </div>
-        <div class="item1">
-            <img src="./img/img4.png" alt="">
-            <div>
-                
-                <p>오시는길</p>
-                <p>오월드 오시는 길을 알아보세요.</p>
-            </div>
-        </div>
-        <div class="item1">
-            <img src="./img/img1.png" alt="">
-            <div>
-                <p>주차안내</p>
-                <p>오월드 주차 위치를 알아보세요.</p>
-            </div>
-        </div>
-           
+<section class="allsale">
+    <p>할인혜택</p>
+    <p>할인된 가격을 비교해 보세요</p>
+    <div class="cardall">
+        <img src="./img/card1.png" alt="">
+        <img src="./img/card2.png" alt=""> 
+        <img src="./img/card3.png" alt=""> 
+        <img src="./img/card4.png" alt=""> 
+        <img src="./img/card5.png" alt=""> 
     </div>
-    <div class="times">
-        <div class="item2">
-            <p>나이트 유니버스 운영시간</p>
-            <p>18:00 ~ 22:00</p>
-        </div>
-        <div class="item3">
-            <p>사파리 운영시간</p>
-            <p>09:30∼18:00</p>
-        </div>
-        <div class="item4">
-            <p>CS CENTER</p>
-            <p>042-580-4820</p>
-        </div>
+    <div class="salebtn"><button>자세히 보기</button></div>
+</section>
+<section>
+    <div class="infonrmationall">
+    <div class="rectangle1">
+        <p>CS CENTER</p>
+        <p>042-580-4820</p>
+        <img src="./img/Rectangle 14.png" alt="">
+    </div>
+    <div  class="rectangle2">
+        <p>CS CENTER</p>
+        <p>042-580-4820</p>
+        <img src="./img/Rectangle 13.png" alt="">
+    </div>
+    <div  class="rectangle3">
+        <p>CS CENTER</p>
+        <p>042-580-4820</p>
+        <img src="./img/Rectangle 4.png" alt="">
+    </div>
     </div>
 </section>
 <section class="newspaper">
@@ -282,233 +275,5 @@
     </div>
 </footer>
 </body>
-<script>
-document.addEventListener('DOMContentLoaded', function () {
-  const menu = document.querySelector('.menu');
-  const menuItems = document.querySelectorAll('.menu-li');
-  let activeItem = null;
-  let isFirstEnter = true;
-
-  menuItems.forEach((item) => {
-    const container = item.querySelector('.container');
-
-    item.addEventListener('mouseenter', () => {
-      if (activeItem && activeItem !== item) {
-        const prevContainer = activeItem.querySelector('.container');
-        prevContainer.classList.remove('show', 'animate-down', 'animate-up');
-      }
-
-      if (isFirstEnter) {
-        container.classList.add('animate-down');
-        isFirstEnter = false;
-      } else {
-        container.classList.remove('animate-down'); // 전환 시 애니메이션 제거
-      }
-
-      container.classList.add('show');
-      activeItem = item;
-    });
-  });
-
-  // 메뉴 전체에서 마우스가 나갔을 때만 닫기
-  menu.addEventListener('mouseleave', () => {
-    if (activeItem) {
-      const container = activeItem.querySelector('.container');
-      container.classList.remove('show', 'animate-down');
-      container.classList.add('animate-up');
-
-      setTimeout(() => {
-        container.classList.remove('animate-up');
-        activeItem = null;
-        isFirstEnter = true;
-      }, 300);
-    }
-  });
-});
-let currentIndex = 0; // 현재 슬라이드 인덱스
-
-const slides = document.querySelectorAll('.slider img'); // 모든 이미지 선택
-const indicators = document.querySelectorAll('.indicator'); // 인디케이터 선택
-const prevButton = document.querySelector('.prev'); // 이전 버튼
-const nextButton = document.querySelector('.next'); // 다음 버튼
-
-// 슬라이더를 업데이트하는 함수
-function updateSlider(index) {
-    // 슬라이드를 이동시켜서 해당 이미지 표시
-    document.querySelector('.slider').style.transform = `translateX(-${index * 100}%)`;
-    
-    // 인디케이터 업데이트
-    indicators.forEach((indicator, i) => {
-        if (i === index) {
-            indicator.classList.add('active');
-        } else {
-            indicator.classList.remove('active');
-        }
-    });
-}
-
-// 다음 슬라이드를 보여주는 함수
-function showNextSlide() {
-    currentIndex = (currentIndex + 1) % slides.length; // 슬라이드를 순차적으로 이동
-    updateSlider(currentIndex);
-}
-
-// 이전 슬라이드를 보여주는 함수
-function showPrevSlide() {
-    currentIndex = (currentIndex - 1 + slides.length) % slides.length; // 슬라이드를 뒤로 이동
-    updateSlider(currentIndex);
-}
-
-// 특정 슬라이드로 이동하는 함수
-function goToSlide(index) {
-    currentIndex = index;
-    updateSlider(currentIndex);
-}
-
-// 버튼 클릭 이벤트 처리
-prevButton.addEventListener('click', showPrevSlide);
-nextButton.addEventListener('click', showNextSlide);
-
-// 인디케이터 클릭 시 해당 슬라이드로 이동
-indicators.forEach(indicator => {
-    indicator.addEventListener('click', () => {
-        goToSlide(parseInt(indicator.dataset.index)); // 클릭된 인디케이터의 index로 이동
-    });
-});
-
-// 슬라이드 자동 전환 기능
-function startAutoSlide() {
-    setInterval(() => {
-        showNextSlide(); // 일정 시간마다 다음 슬라이드로 이동
-    }, 3000); // 3초마다 자동으로 슬라이드 전환
-}
-
-// 자동 슬라이드 시작
-startAutoSlide();
-
-// 초기 슬라이더 상태 설정
-updateSlider(currentIndex);
- const atractionSection = document.querySelector('.atraction');
-
-  const observer = new IntersectionObserver(entries => {
-    entries.forEach(entry => {
-      if (entry.isIntersecting) {
-        atractionSection.classList.add('visible');
-        observer.unobserve(entry.target); // 한 번만 실행
-      }
-    });
-  }, {
-    threshold: 0.3
-  });
-
-  observer.observe(atractionSection);
-
-  
-
-document.querySelectorAll('.newsimgs').forEach(slider => {
-    const images = slider.querySelectorAll('.newsimg img');
-    const prevBtn = slider.querySelector('.ba');
-    const nextBtn = slider.querySelector('.ne');
-    let current = 0;
-    let interval;
-
-    function showImage(index) {
-      images.forEach((img, i) => {
-        img.classList.toggle('active', i === index);
-      });
-    }
-
-    function nextImage() {
-      current = (current + 1) % images.length;
-      showImage(current);
-    }
-
-    function prevImage() {
-      current = (current - 1 + images.length) % images.length;
-      showImage(current);
-    }
-
-    function startAutoSlide() {
-      interval = setInterval(nextImage, 3000); // 3초마다 자동 전환
-    }
-
-    function resetAutoSlide() {
-      clearInterval(interval);
-      startAutoSlide();
-    }
-
-    // 버튼 이벤트 등록
-    nextBtn.addEventListener('click', () => {
-      nextImage();
-      resetAutoSlide();
-    });
-
-    prevBtn.addEventListener('click', () => {
-      prevImage();
-      resetAutoSlide();
-    });
-
-    // 슬라이더마다 자동 전환 시작
-    startAutoSlide();
-  });
-
-const groupSection = document.querySelector('.groupall');
-const title = document.querySelector('.group-title');
-const images = document.querySelectorAll('.group img');
-
-const observers = new IntersectionObserver(entries => {
-  entries.forEach(entry => {
-    if (entry.isIntersecting) {
-      // 텍스트 먼저 표시
-      title.classList.add('visible');
-
-      // 이미지들 순차적으로 표시
-      images.forEach((img, index) => {
-        setTimeout(() => {
-          img.classList.add('visible');
-        }, (index + 1) * 400); // 텍스트 이후부터 시작
-      });
-
-      observers.unobserve(groupSection); // 한 번만 실행
-    }
-  });
-}, {
-  threshold: 0.7
-});
-
-observers.observe(groupSection);
-
-  const btnA = document.getElementById('btnA');
-  const btnB = document.getElementById('btnB');
-  const groupA = document.getElementById('groupA');
-  const groupB = document.getElementById('groupB');
-
-  btnA.addEventListener('click', () => {
-    btnA.classList.add('active');
-    btnB.classList.remove('active');
-    groupA.classList.add('active');
-    groupB.classList.remove('active');
-  });
-
-  btnB.addEventListener('click', () => {
-    btnB.classList.add('active');
-    btnA.classList.remove('active');
-    groupB.classList.add('active');
-    groupA.classList.remove('active');
-  });
-  const atractionSectionbb = document.querySelector('.atraction');
-  const observerbb = new IntersectionObserver(entries => {
-  entries.forEach(entry => {
-    if (entry.isIntersecting) {
-      atractionSectionbb.classList.add('visible');
-      observerbb.unobserve(entry.target); // 한 번만 실행
-    }
-  });
-}, {
-  threshold: 0.5
-});
-
-observerbb.observe(atractionSectionbb);
-</script>
-<script src="https://code.jquery.com/jquery-3.4.1.js"></script>
+ <script src="./index.js"></script>
 </html>
